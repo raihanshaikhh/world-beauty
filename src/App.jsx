@@ -2,15 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import TrustBar from "./components/Trustbar";
-import FeaturedCollections from "./components/FeaturedCollection";
-import BrandStory from "./components/BrandStory";
-import BusinessWithUs from "./components/BusinessWithUs";
-import Footer from "./components/Footer";
-import ShippingPolicy from "./pages/ShippingPolicy";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Nav from "./components/Nav.jsx";
+import Hero from "./components/Hero.jsx";
+import TrustBar from "./components/Trustbar.jsx";
+import FeaturedCollections from "./components/FeaturedCollection.jsx";
+import BrandStory from "./components/BrandStory.jsx";
+import BusinessWithUs from "./components/BusinessWithUs.jsx";
+import Footer from "./components/Footer.jsx";
+import ShippingPolicy from "./pages/ShippingPolicy.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
 
 function Home() {
