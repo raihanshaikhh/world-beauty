@@ -25,8 +25,9 @@ const perks = [
 ];
 
 function BusinessWithUs() {
-  const whatsappNumber = import.meta.env.WHATSAPP_NUMBER;
-  const email = import.meta.env.EMAIL;
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const email = import.meta.env.VITE_EMAIL;
+  const instagramUrl = import.meta.env.VITE_INSTAGRAM_URL;
   const whatsappMsg = encodeURIComponent(
     "Hi World Beauty, I'm interested in wholesale / bulk orders. Please share more details."
   );

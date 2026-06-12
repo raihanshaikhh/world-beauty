@@ -11,8 +11,8 @@ import { products } from "../data/Products.js";
 
 function FeaturedCollections() {
   const swiperRef = useRef(null);
-  const whatsappNumber = "+919004778995";
-  const email = "rajabali6282@gmail.com";
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const email = import.meta.env.VITE_EMAIL;
   const whatsappMsg = encodeURIComponent(
     "Hi World Beauty, I Want To Buy This Collection. Please share more details."
   );

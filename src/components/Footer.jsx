@@ -18,16 +18,14 @@ function AccordionSection({ title, children }) {
                     {title}
                 </h3>
                 <FaChevronDown
-                    className={`md:hidden text-white/40 transition-transform duration-300 ${
-                        open ? "rotate-180" : ""
-                    }`}
+                    className={`md:hidden text-white/40 transition-transform duration-300 ${open ? "rotate-180" : ""
+                        }`}
                 />
             </button>
 
             <div
-                className={`overflow-hidden transition-all duration-300 md:block ${
-                    open ? "max-h-60 mb-4" : "max-h-0 md:max-h-none"
-                }`}
+                className={`overflow-hidden transition-all duration-300 md:block ${open ? "max-h-60 mb-4" : "max-h-0 md:max-h-none"
+                    }`}
             >
                 {children}
             </div>
@@ -36,11 +34,14 @@ function AccordionSection({ title, children }) {
 }
 
 function Footer() {
-    const whatsappNumber = import.meta.env.WHATSAPP_NUMBER;
+    const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+
+    const whatsappNumber2 = import.meta.env.VITE_WHATSAPP_NUMBER_2;
+    const email = import.meta.env.VITE_EMAIL;
     const whatsappMsg = encodeURIComponent(
         "Hi World Beauty, I'm interested in wholesale / bulk orders. Please share more details."
     );
-    const instagramUrl = import.meta.env.INSTAGRAM_URL;
+    const instagramUrl = import.meta.env.VITE_INSTAGRAM_URL;
 
     return (
         <footer className="bg-[#342424] text-white border-t border-[#D18B8B]/20">
@@ -102,22 +103,32 @@ function Footer() {
                     {/* Contact Info */}
                     <AccordionSection title="Contact Info">
                         <div className="space-y-4 text-white/60 text-sm leading-relaxed pb-2 md:mt-6">
-                        
+
                             <p className="flex items-start gap-2">
-                               
-                                    <FaLocationDot className="text-[#D18B8B] mt-1.5  " />
-                           
+
+                                <FaLocationDot className="text-[#D18B8B] mt-1.5  " />
+
                                 Plot No. 14/M/1, Road No. 2<br />
                                 Near Hari Masjid, Shivaji Nagar<br />
                                 Govandi, Mumbai 400043
                             </p>
                             <p className="flex items-start gap-2">
-                                
-                                    <IoCall className="text-[#D18B8B] mt-1.5" />
-                                    
-                               
-                                +91 7753050839
+                                <IoCall className="text-[#D18B8B] mt-1" />
+
+                                <a
+                                    href={`tel:+${whatsappNumber}`}
+                                    className="hover:text-[#D18B8B] transition"
+                                >
+                                    {whatsappNumber}
+                                </a>
+                                 <a
+                                    href={`tel:+${whatsappNumber2}`}
+                                    className="hover:text-[#D18B8B] transition"
+                                >
+                                    {whatsappNumber2}
+                                </a>
                             </p>
+                            
                             <p className="flex items-start gap-2">
                                 <GoClockFill className="text-[#D18B8B] mt-1.5" />
                                 Monday - Saturday<br />10:00 AM - 7:00 PM</p>

@@ -2,21 +2,21 @@ import React from "react";
 import brandStoryBg from "../assets/background-image.png";
 function BrandStory() {
     return (
-        <section className=" py-32 relative w-full max-h-[80vh] flex items-center justify-center overflow-hidden">
+        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-32">
 
             {/* Background Image */}
             <div className="absolute inset-0">
                 <img
                     src={brandStoryBg}
                     alt="World Beauty"
-                    className="w-full h-full bg-cover bg-[position:75%_center] lg:bg-center"
+                    className="w-full h-full object-cover object-[65%_center] md:object-center"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/35" />
             </div>
 
             {/* Content */}
-            <div className="relative z-10 max-w-2xl mx-auto px-6 py-20 text-center backdrop-blur-[2px] bg-white/4 rounded-3xl ">
+            <div className="relative z-10 w-full max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-20 text-center">
 
                 {/* Eyebrow */}
                 <p className="text-sm uppercase tracking-[0.25em] text-[#D18B8B] mb-5 font-semibold">
@@ -24,7 +24,7 @@ function BrandStory() {
                 </p>
 
                 {/* Brand Name */}
-                <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                     World Beauty
                 </h2>
 
@@ -45,20 +45,26 @@ function BrandStory() {
                 </p>
 
                 {/* Stats row */}
-                <div className="flex items-center justify-center gap-10 mb-12">
+                <div className="grid grid-cols-3 gap-4 md:gap-10 mb-12">
                     <div>
-                        <p className="text-white text-2xl font-bold">100%</p>
-                        <p className="text-white/40 text-xs uppercase tracking-widest mt-1">Handcrafted Quality</p>
+                        <p className="text-white text-xl md:text-2xl font-bold">100%</p>
+                        <p className="text-white/50 text-[10px] md:text-xs uppercase tracking-widest mt-1">
+                            Handcrafted Quality
+                        </p>
                     </div>
-                    <div className="w-px h-8 bg-white/20" />
+
                     <div>
-                        <p className="text-white text-2xl font-bold">80+</p>
-                        <p className="text-white/40 text-xs uppercase tracking-widest mt-1">Curated Designs</p>
+                        <p className="text-white text-xl md:text-2xl font-bold">80+</p>
+                        <p className="text-white/50 text-[10px] md:text-xs uppercase tracking-widest mt-1">
+                            Curated Designs
+                        </p>
                     </div>
-                    <div className="w-px h-8 bg-white/20" />
+
                     <div>
-                        <p className="text-white text-2xl font-bold">Premium</p>
-                        <p className="text-white/40 text-xs uppercase tracking-widest mt-1">Fabric Selection</p>
+                        <p className="text-white text-xl md:text-2xl font-bold">Premium</p>
+                        <p className="text-white/50 text-[10px] md:text-xs uppercase tracking-widest mt-1">
+                            Fabric Selection
+                        </p>
                     </div>
                 </div>
 
