@@ -36,11 +36,11 @@ function AccordionSection({ title, children }) {
 }
 
 function Footer() {
-    const whatsappNumber = "917753050839";
+    const whatsappNumber = import.meta.env.WHATSAPP_NUMBER;
     const whatsappMsg = encodeURIComponent(
         "Hi World Beauty, I'm interested in wholesale / bulk orders. Please share more details."
     );
-    const instagramUrl = "https://www.instagram.com/world_beauty_by_rida";
+    const instagramUrl = import.meta.env.INSTAGRAM_URL;
 
     return (
         <footer className="bg-[#342424] text-white border-t border-[#D18B8B]/20">
