@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-italianno: "Italianno", cursive;
+  --font-playfair: "Playfair Display", serif;
+}
