@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { products } from "../data/products.js";
+import {products} from "../data/Products.js"
 import { FaWhatsapp } from "react-icons/fa";
 import {useState} from "react";
 
