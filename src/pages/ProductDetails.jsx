@@ -21,7 +21,7 @@ function ProductDetails() {
     const [selectedSize, setSelectedSize] = useState(
   product?.sizes?.[0] || ""
 );
-  const whatsappNumber = "+919004778995";
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 
   const whatsappMsg = encodeURIComponent(
     `Hi, I'm interested in ${product.name}. Selected Size: ${selectedSize}`
