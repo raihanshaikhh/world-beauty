@@ -26,7 +26,7 @@ const perks = [
 
 function BusinessWithUs() {
   const whatsappNumber = "+919004778995";
-  const email = "rajabali6282@gmail.com";
+  const email = "rajabali6282@gmail.com"; 
   const whatsappMsg = encodeURIComponent(
     "Hi World Beauty, I'm interested in wholesale / bulk orders. Please share more details."
   );
@@ -84,11 +84,11 @@ function BusinessWithUs() {
           </div>
 
           {/* Right — Perks grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 ">
             {perks.map((perk, index) => (
               <div
                 key={index}
-                className="bg-white border border-[#F0E6E6] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300"
+                className="bg-white border border-[#F0E6E6] rounded-2xl p-6 hover:shadow-md transition-shadow duration-300 cursor-pointer"
               >
                 <div className="w-10 h-10 rounded-full bg-[#FDF0F0] text-[#D18B8B] flex items-center justify-center mb-4">
                   {perk.icon}

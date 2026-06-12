@@ -11,6 +11,7 @@ import BusinessWithUs from "./components/BusinessWithUs";
 import Footer from "./components/Footer";
 import ShippingPolicy from "./pages/ShippingPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ProductDetails from "./pages/ProductDetails.jsx";
 
 function Home() {
   return (
@@ -44,8 +45,13 @@ function App() {
           path="/shipping-policy"
           element={<ShippingPolicy />}
         />
+         <Route
+    path="/product/:slug"
+    element={<ProductDetails />}
+  />
 
       </Routes>
+     
     </BrowserRouter>
   );
 }
