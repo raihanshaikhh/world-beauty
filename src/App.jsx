@@ -1,21 +1,53 @@
-import { useState } from 'react'
-import './App.css'
-import Nav from './components/Nav.jsx'
-import Hero from './components/Hero.jsx'
-import TrustBar from './components/Trustbar.jsx'
-import FeaturedCollections from './components/FeaturedCollection.jsx'
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import "./App.css";
 
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import TrustBar from "./components/Trustbar";
+import FeaturedCollections from "./components/FeaturedCollection";
+import BrandStory from "./components/BrandStory";
+import BusinessWithUs from "./components/BusinessWithUs";
+import Footer from "./components/Footer";
+import ShippingPolicy from "./pages/ShippingPolicy";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+function Home() {
   return (
-    <div className="App">
+    <>
       <Nav />
       <Hero />
       <TrustBar />
       <FeaturedCollections />
-    </div>
-
-  )
+      <BrandStory />
+      <BusinessWithUs />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+
+        <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route
+          path="/shipping-policy"
+          element={<ShippingPolicy />}
+        />
+
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;

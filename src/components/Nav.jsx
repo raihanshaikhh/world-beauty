@@ -10,10 +10,10 @@ function Nav() {
 
   return (
     <nav className="sticky top-0 z-50 relative bg-[#fce8e8] border-b border-[#F0D9D5]">
-      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
         {/* Logo */}
-        <img src={logo} alt="World Beauty" className="h-28 object-contain" />
+        <img src={logo} alt="World Beauty" className="h-24 object-contain" />
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-10 font-semibold">
