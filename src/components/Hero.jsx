@@ -8,6 +8,7 @@ function Hero() {
   style={{
     backgroundImage: `url(${heroImg})`,
     minHeight: "clamp(500px, 75vh, 750px)",
+    loading: "lazy",
       }}
     >
       {/* Dark overlay for text readability */}

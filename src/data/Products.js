@@ -27,18 +27,18 @@ export const products = [
     price: "₹430",
     image: blackAbaya2,
     description:
-      "Beautiful abaya featuring delicate beaded sleeve detailing.",
+      "An elegant black abaya featuring delicate beadwork on the sleeves for a subtle touch of sophistication. Made from soft Premium Nida fabric, it combines comfort, modesty, and style.",
     fabric: "Premium Nida",
     sizes: ["S", "M", "L", "XL"],
   },
-{
+  {
     id: 3,
     slug: "eclipse-elegance-abaya",
     name: "Eclipse Elegance Abaya",
     price: "₹430",
     image: blackAbaya3,
     description:
-      "Beautiful abaya featuring delicate beaded sleeve detailing.",
+      "A refined black abaya adorned with intricate sleeve embellishments and a flattering silhouette. The breathable Premium Nida fabric drapes beautifully, making it perfect for both casual and formal settings.",
     fabric: "Premium Nida",
     sizes: ["S", "M", "L", "XL"],
   },
@@ -49,7 +49,7 @@ export const products = [
     price: "₹430",
     image: cremeAbaya,
     description:
-      "Beautiful abaya featuring delicate beaded sleeve detailing.",
+          "A graceful cream-colored abaya that radiates simplicity and elegance. Designed with a flowing fit and crafted from Premium Nida fabric, it offers all-day comfort with a sophisticated finish.",
     fabric: "Premium Nida",
     sizes: ["S", "M", "L", "XL"],
   },
@@ -60,7 +60,7 @@ export const products = [
     price: "₹430",
     image: greyAbaya,
     description:
-      "Beautiful abaya featuring delicate beaded sleeve detailing.",
+      "A chic moon-grey abaya featuring a modern yet modest design. Its smooth Premium Nida fabric provides a luxurious feel, while the relaxed fit ensures comfort throughout the day.",
     fabric: "Premium Nida",
     sizes: ["S", "M", "L", "XL"],
   },
@@ -71,7 +71,7 @@ export const products = [
     price: "₹430",
     image: blueAbaya,
     description:
-      "Beautiful abaya featuring delicate beaded sleeve detailing.",
+         "A graceful front-open abaya in a soft sky-blue shade, detailed with delicate contrast piping and a stylish pendant accent. Made from lightweight Premium Nida fabric and paired with a matching niqab, it offers effortless elegance and all-day comfort.",
     fabric: "Premium Nida",
     sizes: ["S", "M", "L", "XL"],
   },
@@ -82,7 +82,7 @@ export const products = [
     price: "₹430",
     image: brownAbaya,
     description:
-      "Beautiful abaya featuring delicate beaded sleeve detailing.",
+       "A beautifully tailored brown abaya inspired by warm golden dusk tones. Crafted from Premium Nida fabric, it features a flowing silhouette that blends comfort, modesty, and understated elegance.",
     fabric: "Premium Nida",
     sizes: ["S", "M", "L", "XL"],
   },

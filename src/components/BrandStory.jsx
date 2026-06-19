@@ -10,6 +10,7 @@ function BrandStory() {
                     src={brandStoryBg}
                     alt="World Beauty"
                     className="w-full h-full object-cover object-[65%_center] md:object-center"
+                    loading="lazy"
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/35" />
@@ -19,7 +20,7 @@ function BrandStory() {
             <div className="relative z-10 w-full max-w-4xl mx-auto px-4 md:px-6 py-12 md:py-20 text-center">
 
                 {/* Eyebrow */}
-                <p className="text-sm uppercase tracking-[0.25em] text-[#D18B8B] mb-5 font-semibold">
+                <p className="text-xl uppercase tracking-[0.25em] text-[#E8A0A0] mb-5 font-semibold">
                     Our Story
                 </p>
 
