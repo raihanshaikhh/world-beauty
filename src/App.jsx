@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { Analytics } from '@vercel/analytics/next';
 import "./App.css";
 
 import Nav from "./components/Nav.jsx";
@@ -23,6 +23,7 @@ function Home() {
       <BrandStory />
       <BusinessWithUs />
       <Footer />
+       <Analytics />
     </>
   );
 }
