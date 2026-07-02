@@ -5,7 +5,7 @@ import greyAbaya from "../assets/grey-abaya.jpeg";
 import blueAbaya from "../assets/blue-abaya.jpeg"
 import brownAbaya from "../assets/brown-abaya.jpeg"
 import blackAbaya3 from "../assets/black-abaya-3.jpeg"
-
+import blackHandworkAbaya from "../assets/black-abaya-flower-sleeves.jpeg"
 
 export const products = [
   {
@@ -86,4 +86,15 @@ export const products = [
     fabric: "Premium Nida",
     sizes: ["S", "M", "L", "XL"],
   },
+{
+  id: 8,
+  slug: "midnight-blossom-abaya",
+  name: "Midnight Blossom Abaya",
+  price: "₹450",
+  image: blackHandworkAbaya,
+  description:
+    "An elegant black abaya crafted from Premium Nida fabric, featuring exquisite floral handwork with intricate bead and sequin embroidery on the sleeves. Designed with a graceful flowing silhouette, it offers the perfect balance of sophistication, comfort, and modest style.",
+  fabric: "Premium Nida",
+  sizes: ["S", "M", "L", "XL"],
+},
 ];
