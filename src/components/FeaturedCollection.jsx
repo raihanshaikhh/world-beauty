@@ -4,7 +4,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { products } from "../data/Products.js";
+import { products } from "../data/products.js";
 import AllProducts from "../pages/AllProducts.jsx";
 import ProductCard from "./ProductCard.jsx";
 
@@ -85,7 +85,7 @@ function FeaturedCollections() {
             {featuredProducts.map((product) => (
               <SwiperSlide key={product.id} className="pb-5">
                 {/* <Link to={`/product/${product.slug}`}> */}
-                 <ProductCard product={product} />
+                <ProductCard product={product} />
                 {/* </Link> */}
               </SwiperSlide>
             ))}
@@ -96,7 +96,7 @@ function FeaturedCollections() {
         <div className="grid grid-cols-2 gap-4 lg:hidden">
           {featuredProducts.map((product) => (
             // <Link key={product.id} to={`/product/${product.slug}`}>
-              <ProductCard product={product} />
+            <ProductCard product={product} />
             // </Link>
           ))}
         </div>
