@@ -4,7 +4,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { products } from "../data/products.js";
+import { products } from "../data/Products.js";
 import AllProducts from "../pages/AllProducts.jsx";
 import ProductCard from "./ProductCard.jsx";
 
