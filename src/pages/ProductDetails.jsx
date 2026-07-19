@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import {products} from "../data/Products.js"
+import { products } from "../data/Products.js"
 import { FaWhatsapp } from "react-icons/fa";
-import {useState} from "react";
+import { useState } from "react";
 
 function ProductDetails() {
   const { slug } = useParams();
@@ -18,9 +18,9 @@ function ProductDetails() {
       </div>
     );
   }
-    const [selectedSize, setSelectedSize] = useState(
-  product?.sizes?.[0] || ""
-);
+  const [selectedSize, setSelectedSize] = useState(
+    product?.sizes?.[0] || ""
+  );
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 
   const whatsappMsg = encodeURIComponent(
@@ -67,27 +67,26 @@ function ProductDetails() {
               </p>
             </div>
 
-<div className="mt-8">
-  <h3 className="font-semibold text-[#4B3A3A] mb-3">
-    Available Sizes
-  </h3>
+            <div className="mt-8">
+              <h3 className="font-semibold text-[#4B3A3A] mb-3">
+                Available Sizes
+              </h3>
 
-  <div className="flex gap-3 flex-wrap">
-    {product.sizes.map((size) => (
-      <button
-        key={size}
-        onClick={() => setSelectedSize(size)}
-        className={`px-4 py-2 rounded-full border transition-all duration-200 ${
-          selectedSize === size
-            ? "bg-[#D18B8B] text-white border-[#D18B8B]"
-            : "border-gray-300 hover:border-[#D18B8B]"
-        }`}
-      >
-        {size}
-      </button>
-    ))}
-  </div>
-</div>
+              <div className="flex gap-3 flex-wrap">
+                {product.sizes.map((size) => (
+                  <button
+                    key={size}
+                    onClick={() => setSelectedSize(size)}
+                    className={`px-4 py-2 rounded-full border transition-all duration-200 ${selectedSize === size
+                        ? "bg-[#D18B8B] text-white border-[#D18B8B]"
+                        : "border-gray-300 hover:border-[#D18B8B]"
+                      }`}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </div>
 
             <a
               href={`https://wa.me/${whatsappNumber}?text=${whatsappMsg}`}

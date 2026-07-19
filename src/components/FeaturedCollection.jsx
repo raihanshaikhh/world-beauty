@@ -5,12 +5,15 @@ import "swiper/css";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { products } from "../data/Products.js";
+import AllProducts from "../pages/AllProducts.jsx";
+import ProductCard from "./ProductCard.jsx";
 
 
 
 
 function FeaturedCollections() {
   const swiperRef = useRef(null);
+  const featuredProducts = products.slice(0, 8);
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
   const email = import.meta.env.VITE_EMAIL;
   const whatsappMsg = encodeURIComponent(
@@ -79,11 +82,11 @@ function FeaturedCollections() {
             speed={3000}
 
           >
-            {products.map((product) => (
-              <SwiperSlide key={product.id}>
-                <Link to={`/product/${product.slug}`}>
-                  <Card col={product} />
-                </Link>
+            {featuredProducts.map((product) => (
+              <SwiperSlide key={product.id} className="pb-5">
+                {/* <Link to={`/product/${product.slug}`}> */}
+                 <ProductCard product={product} />
+                {/* </Link> */}
               </SwiperSlide>
             ))}
           </Swiper>
@@ -91,25 +94,29 @@ function FeaturedCollections() {
 
         {/* Mobile: 2-column grid */}
         <div className="grid grid-cols-2 gap-4 lg:hidden">
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <Link to={`/product/${product.slug}`}>
-                <Card col={product} />
-              </Link>
-            </SwiperSlide>
+          {featuredProducts.map((product) => (
+            // <Link key={product.id} to={`/product/${product.slug}`}>
+              <ProductCard product={product} />
+            // </Link>
           ))}
         </div>
 
         {/* View All */}
-        <div className="mt-8 text-center">
-          <button
-            onClick={() => {
-              window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMsg}`, '_blank');
-            }}
-            className="cursor-pointer border border-[#D18B8B] text-[#D18B8B] hover:bg-[#D18B8B] hover:text-white text-sm font-semibold px-8 py-3 rounded-full transition-colors duration-200">
-            Chat on WhatsApp
-            <FaWhatsapp size={16} className="inline ml-2" />
+        <div className="mt-8 flex justify-center gap-4">
+          <Link
+            to="/Products"
+            className="border border-[#D18B8B] text-[#D18B8B] hover:bg-[#D18B8B] hover:text-white px-8 py-3 rounded-full"
+          >
+            View All Collection
+          </Link>
 
+          <button
+            onClick={() =>
+              window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMsg}`, "_blank")
+            }
+            className="bg-[#D18B8B] text-white px-8 py-3 rounded-full hover:opacity-90 cursor-pointer"
+          >
+            Chat on WhatsApp
           </button>
         </div>
 
@@ -118,26 +125,5 @@ function FeaturedCollections() {
   );
 }
 
-function Card({ col }) {
-  return (
-    <div className="group relative overflow-hidden rounded-2xl cursor-pointer">
-      <div className="aspect-[3/4] w-full overflow-hidden">
-        <img
-          src={col.image}
-          alt={col.name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-      </div>
-      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent rounded-b-2xl">
-        <p className="text-white font-semibold text-base">{col.name}</p>
-        <div className="flex items-center justify-between mt-0.5">
-          <p className="text-white/70 text-xs">{col.subtitle}</p>
-          <span className="text-white/70 text-xs">{col.items}</span>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default FeaturedCollections;

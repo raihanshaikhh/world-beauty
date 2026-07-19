@@ -12,17 +12,18 @@ import Footer from "./components/Footer.jsx";
 import ShippingPolicy from "./pages/ShippingPolicy.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import ProductDetails from "./pages/ProductDetails.jsx";
+import AllProducts from "./pages/AllProducts.jsx";
 
 function Home() {
   return (
     <>
-      <Nav />
+      
       <Hero />
       <TrustBar />
       <FeaturedCollections />
       <BrandStory />
       <BusinessWithUs />
-      <Footer />
+      
    
     </>
   );
@@ -31,6 +32,7 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
+    <Nav />
       <Routes>
 
         <Route
@@ -46,13 +48,17 @@ function App() {
           path="/shipping-policy"
           element={<ShippingPolicy />}
         />
-         <Route
-    path="/product/:slug"
-    element={<ProductDetails />}
-  />
+        <Route
+          path="/product/:slug"
+          element={<ProductDetails />}
+        />
+        <Route
+          path="/products"
+          element={<AllProducts />}
+        />
 
       </Routes>
-     
+     <Footer />
     </BrowserRouter>
   );
 }
