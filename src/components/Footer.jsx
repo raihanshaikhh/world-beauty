@@ -58,7 +58,7 @@ function Footer() {
                         </p>
                         <div className="flex items-center gap-4">
                             <a
-                                href={instagramUrl}
+                                href={`${instagramUrl}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:border-[#D18B8B] hover:text-[#D18B8B] transition"
